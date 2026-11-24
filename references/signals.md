@@ -38,7 +38,7 @@
 
 说明：
 - `implement` 会在内部调用 `tdd` 和 `code-review`。走了 `implement` 的任务，第 13 条不再单独提示
-- `interrogate` 依赖 pstack 的 `arena` 和 `in-your-own-words`，三个要一起装
+- `grill-with-docs` 内部调用 Matt 的 `grilling` 和 `domain-modeling`；`interrogate` 依赖 pstack 的 `arena` 和 `in-your-own-words`。这些都已列在 `dependencies.txt`
 - 交接只在要换工具、换目录或交给别人时用 `handoff`。同一工具里明天接着做，在 `progress.md` 记一行就够了
 
 ## 3. 安装路径
@@ -49,11 +49,6 @@
 2. 全局：`~/.agents/skills/<名字>/SKILL.md`
 3. 工具自带目录：`~/.codex/skills/`、`~/.claude/skills/`
 
-都找不到时，给我对应的安装命令：
+都找不到时，问我要不要运行 `scripts/install.sh`。它按 `dependencies.txt` 安装，已装的会跳过。
 
-```
-npx skills add mattpocock/skills -g --skill <名字>
-npx skills add backnotprop/pstack -g --skill <名字>
-```
-
-Matt 和 pstack 都有 `tdd` 和 `teach`，只装 Matt 的版本。
+Matt 和 pstack 都有 `tdd` 和 `teach`，清单里只放 Matt 的版本。

@@ -1,0 +1,8 @@
+# harness-workflow 依赖的官方技能。格式：<仓库> <技能名...>
+# 由 scripts/install.sh 读取。增删技能只改这里。
+
+# Matt Pocock：骨架
+mattpocock/skills tdd diagnosing-bugs codebase-design domain-modeling setup-matt-pocock-skills grilling grill-me grill-with-docs to-spec to-tickets implement prototype improve-codebase-architecture code-review retro handoff
+
+# pstack：理解代码、影响面、对抗评审、去 AI 腔（interrogate 依赖 arena、in-your-own-words）
+backnotprop/pstack how why blast-radius interrogate arena in-your-own-words unslop
