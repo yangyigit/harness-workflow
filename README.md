@@ -10,6 +10,8 @@
 
 原则是少脚本、多交互，状态只记在 Markdown 里。拆分规则参考 [为什么一个巨大的指令文件会失败](https://walkinglabs.github.io/learn-harness-engineering/zh/lectures/lecture-04-why-one-giant-instruction-file-fails/)。
 
+完整说明（设计理念、工作原理、安装、使用、常见问题）见 [docs/GUIDE.md](docs/GUIDE.md)。
+
 ## 安装
 
 需要 Node.js（用来跑 `npx skills`）、bash 和网络。
@@ -98,6 +100,7 @@ Matt 和 pstack 都有 `tdd`，只装 Matt 的版本。
 ```
 harness-workflow/
 ├── SKILL.md              路由、提示规则、文件分工、硬约束
+├── docs/GUIDE.md         完整说明文档
 ├── dependencies.txt      依赖的官方技能清单
 ├── scripts/install.sh    安装与更新
 ├── references/
