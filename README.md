@@ -29,6 +29,18 @@ scripts/install.sh
 SKILL_AGENTS="codex cursor" scripts/install.sh
 ```
 
+### 只装到某个项目
+
+不想装全局时，在目标项目根目录下加 `--project` 运行，会装到该项目的 `.agents/skills/`，并生成该项目的 `skills-lock.json`：
+
+```bash
+cd /path/to/your-project
+/path/to/harness-workflow/scripts/install.sh --project --dry-run
+/path/to/harness-workflow/scripts/install.sh --project
+```
+
+判断「已安装」时只看该项目里的目录，不看全局。项目里的 `.agents/` 和 `skills-lock.json` 要不要进 git，由项目自己的 `.gitignore` 决定。
+
 ## 更新
 
 ```bash
