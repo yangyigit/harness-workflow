@@ -49,7 +49,7 @@ description: 项目工作流路由。负责两件事：一是根据代码生成�
 
 | 环节 | 什么时候 | 细则 |
 |---|---|---|
-| 初始化 `init` | 仓库没有 `AGENTS.md`；或我说「初始化 / 接手 / 生成 AGENTS」 | `references/init.md` |
+| 初始化 `init` | 仓库没有 `AGENTS.md`；或我说「初始化 / 接手 / 生成 AGENTS」。最后一步直接运行 `setup-matt-pocock-skills` | `references/init.md` |
 | 拆分 `split` | `AGENTS.md` 超过 200 行，或硬约束超过 15 条 | `references/init.md` 第 4 节 |
 | 完成前验证 | 声称完成之前 | 跑 `AGENTS.md` 里「完成前必跑」的命令并贴出结果 |
 | 进度记录 | 开工、收工、范围外的发现 | 写 `docs/agents/progress.md` |

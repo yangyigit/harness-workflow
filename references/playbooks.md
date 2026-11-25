@@ -49,7 +49,7 @@
 
 ## 接手老项目 / 初始化
 1. 提示 `init`。已有 `AGENTS.md` 就先读，再判断要不要 `split`
-2. init 完成后，提示 `setup-matt-pocock-skills`（推荐选本地 markdown tracker）
+2. init 完成后，直接运行 `setup-matt-pocock-skills`，按它的提示逐项问我（见 `init.md` 第 8 节）
 
 ## 依赖升级
 1. 读 changelog 里的破坏性变更

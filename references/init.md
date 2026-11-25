@@ -115,4 +115,17 @@ docs/agents/
 - [ ] 验证命令真跑过一次，结果写进 `progress.md` 的「基线」。如果是红的，说明是基线问题
 - [ ] 所有「待确认」都列出来：逐条问我，或一次列完让我挑
 
-最后给我一份摘要：生成了哪些文件、各多少行、还有哪些待确认。然后提示 `setup-matt-pocock-skills`。
+最后给我一份摘要：生成了哪些文件、各多少行、还有哪些待确认。然后进入第 8 节。
+
+## 8. 接着运行 `setup-matt-pocock-skills`
+
+init 的最后一步，不再单独问要不要做。原因：Matt 的 `to-spec`、`to-tickets`、`code-review` 等都要读它生成的配置，没配就用不了。
+
+1. 先检查：项目里已有 `docs/agents/issue-tracker.md`，说明配过了，跳过本节，告诉我一声即可
+2. 按 `signals.md` 第 3 节的路径找到 `setup-matt-pocock-skills/SKILL.md`。找不到就说明没装，问我要不要运行 `scripts/install.sh`（项目级加 `--project`），装完再继续
+3. 读完它的 SKILL.md，从第 1 步开始原样执行。每一节的问题都按它的格式问我、等我回答，不替我选，也不跳过它要求的「先给我看草稿再写入」
+4. 它问 issue tracker 时，没有 GitHub/GitLab 远程的仓库，在选项后补一句「推荐本地 markdown」；有远程的，按它自己的默认推荐
+5. 它要编辑的入口文件按它的规则选（已有 `CLAUDE.md` 就改 `CLAUDE.md`）。它追加的 `## Agent skills` 小节放在入口「工作方式」之后、「重申」之前
+6. 它结束后，重新 `wc -l AGENTS.md`，确认入口仍不超过 200 行；超了提示 `split`
+
+它的步骤和本 skill 冲突时，以它为准。本 skill 只负责上面第 4、5、6 条里本仓库的约定。
