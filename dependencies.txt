@@ -2,7 +2,8 @@
 # 由 scripts/install.sh 读取。增删技能只改这里。
 
 # Matt Pocock：骨架
-mattpocock/skills tdd diagnosing-bugs codebase-design domain-modeling setup-matt-pocock-skills grilling grill-me grill-with-docs to-spec to-tickets implement prototype improve-codebase-architecture code-review retro handoff
+# retro 调用 writing-for-agents；wayfinder 调用 research、prototype、grilling、domain-modeling
+mattpocock/skills tdd diagnosing-bugs codebase-design domain-modeling setup-matt-pocock-skills ask-matt grilling grill-me grill-with-docs wayfinder to-spec to-tickets implement research prototype improve-codebase-architecture code-review retro writing-for-agents handoff
 
 # pstack：理解代码、影响面、对抗评审、去 AI 腔（interrogate 依赖 arena、in-your-own-words）
 backnotprop/pstack how why blast-radius interrogate arena in-your-own-words unslop

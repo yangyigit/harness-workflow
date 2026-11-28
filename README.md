@@ -68,7 +68,7 @@ scripts/install.sh --update
 
 | 来源 | 自动使用 | 命中信号才提示 |
 |---|---|---|
-| Matt | `tdd`、`diagnosing-bugs`、`codebase-design`、`domain-modeling` | `setup-matt-pocock-skills`、`grill-with-docs`、`grill-me`、`to-spec`、`to-tickets`、`implement`、`prototype`、`improve-codebase-architecture`、`code-review`、`retro`、`handoff` |
+| Matt | `tdd`、`diagnosing-bugs`、`codebase-design`、`domain-modeling` | `setup-matt-pocock-skills`、`ask-matt`、`wayfinder`、`grill-with-docs`、`grill-me`、`to-spec`、`to-tickets`、`implement`、`research`、`prototype`、`improve-codebase-architecture`、`code-review`、`retro`、`handoff` |
 | pstack | — | `how`、`why`、`blast-radius`、`interrogate`、`unslop` |
 
 另有几个被其他技能调用的依赖，也在清单里：`grilling`（`grill-with-docs` 调用）、`arena` 和 `in-your-own-words`（`interrogate` 调用）。
@@ -91,6 +91,7 @@ Matt 和 pstack 都有 `tdd`，只装 Matt 的版本。
 | 文件 | 谁写 |
 |---|---|
 | `AGENTS.md`、`docs/agents/{project,architecture,stack,conventions,commands,progress}.md` | 本 skill |
+| `docs/agents/design-artifacts.md`（项目用 OpenDesign 时才有） | 本 skill |
 | `docs/agents/{issue-tracker,domain,triage-labels}.md` | `setup-matt-pocock-skills` |
 | `GLOSSARY.md`、`docs/adr/` | `domain-modeling` |
 | `.scratch/<feature>/` | `to-spec`、`to-tickets`（本地 tracker 时） |

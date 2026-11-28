@@ -60,7 +60,8 @@ docs/agents/
 ├── stack.md                  技术栈：框架、版本、关键依赖、用法要点
 ├── conventions.md            规范：命名、目录、写法、错误处理、测试、提交
 ├── commands.md               命令：安装、开发、构建、测试、lint、发布
-└── progress.md               当前任务、基线、待办、交接
+├── progress.md               当前任务、基线、待办、交接
+└── design-artifacts.md       可选：OpenDesign 设计稿约定，项目用 OpenDesign 时才建
 <模块目录>/AGENTS.md           可选：大模块自己的规则，50-150 行
 ```
 
@@ -83,7 +84,9 @@ docs/agents/
 4. **工程原则**：模板里的 7 条原样写入，不计入硬约束条数。老项目已有同义规则的（比如「禁止为模式而模式化」），保留项目原文，只补缺的，并在差异摘要里列出哪几条是新补的。项目规则比原则更严时（比如引入新包要先讨论），以项目规则为准
 5. **模块地图**：每个模块一行，写路径和一句话职责
 6. **文档索引**：每篇专题一行，写路径、内容、**何时必读**
-7. **工作方式**：一行，指向本 skill
+7. **工作流入口**：模板里的入口清单原样写入（约 40 行，按 `dependencies.txt` 里的技能分组），按项目改两处：单仓项目把 `projects/<repo>` 读作仓库根并去掉 `Repo:` 行要求；设计探索那一行见下一段。代码规范只写在 `AGENTS.md` 和 `conventions.md` 里，不生成 `CODING_STANDARDS.md`。`dependencies.txt` 增删技能时，同步改这一节
+
+   设计稿：读代码时没看到 OpenDesign（`.scratch/**/opendesign/`、`od` 命令）的，在第 2 节的提问里问一句用不用。用就按 `assets/templates/design-artifacts.md` 生成 `docs/agents/design-artifacts.md`，把 `<workspace>` 换成工作区目录 basename；不用就不生成，删掉文档索引里那一行，设计探索那一行只保留「仅在明确要求时」的约束，不指向不存在的文件
 8. **底部重申**：把最关键的 2-3 条硬约束再写一遍，防止埋在中间被忽略
 
 `setup-matt-pocock-skills` 之后会在入口追加一个 `## Agent skills` 小节（约 10 行），行数预算要留出这部分。
@@ -125,7 +128,7 @@ init 的最后一步，不再单独问要不要做。原因：Matt 的 `to-spec`
 2. 按 `signals.md` 第 3 节的路径找到 `setup-matt-pocock-skills/SKILL.md`。找不到就说明没装，问我要不要运行 `scripts/install.sh`（项目级加 `--project`），装完再继续
 3. 读完它的 SKILL.md，从第 1 步开始原样执行。每一节的问题都按它的格式问我、等我回答，不替我选，也不跳过它要求的「先给我看草稿再写入」
 4. 它问 issue tracker 时，没有 GitHub/GitLab 远程的仓库，在选项后补一句「推荐本地 markdown」；有远程的，按它自己的默认推荐
-5. 它要编辑的入口文件按它的规则选（已有 `CLAUDE.md` 就改 `CLAUDE.md`）。它追加的 `## Agent skills` 小节放在入口「工作方式」之后、「重申」之前
+5. 它要编辑的入口文件按它的规则选（已有 `CLAUDE.md` 就改 `CLAUDE.md`）。它追加的 `## Agent skills` 小节放在入口「工作流入口」之后、「重申」之前
 6. 它结束后，重新 `wc -l AGENTS.md`，确认入口仍不超过 200 行；超了提示 `split`
 
 它的步骤和本 skill 冲突时，以它为准。本 skill 只负责上面第 4、5、6 条里本仓库的约定。

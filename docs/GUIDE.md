@@ -133,7 +133,7 @@ agent 加载本 skill 时只读 `SKILL.md`；`references/` 下的文档按需读
 | 设计或调整模块接口 | `codebase-design` |
 | 讨论中出现新术语、做出取舍 | `domain-modeling` |
 
-**命中就提示**：16 条信号按优先级排列，例如「没说什么算做完」提示 `grill-with-docs`，「改了公共组件」提示 `blast-radius`，「收工」提示 `retro`。完整列表见 `references/signals.md`。
+**命中就提示**：19 条信号按优先级排列，例如「该用哪个技能」提示 `ask-matt`，「路线看不清的大工程」提示 `wayfinder`，「没说什么算做完」提示 `grill-with-docs`，「改了公共组件」提示 `blast-radius`，「收工」提示 `retro`。完整列表见 `references/signals.md`。
 
 提示的规则：
 
@@ -191,6 +191,7 @@ agent 加载本 skill 时只读 `SKILL.md`；`references/` 下的文档按需读
 | 文件 | 谁写 |
 |---|---|
 | `AGENTS.md`、`docs/agents/{project,architecture,stack,conventions,commands,progress}.md` | 本 skill |
+| `docs/agents/design-artifacts.md`（项目用 OpenDesign 时才有） | 本 skill |
 | `docs/agents/{issue-tracker,domain,triage-labels}.md`，以及 `AGENTS.md` 里的 `## Agent skills` 小节 | `setup-matt-pocock-skills` |
 | `GLOSSARY.md`、`docs/adr/` | `domain-modeling`（经 `grill-with-docs` 等调用） |
 | `.scratch/<feature>/` | `to-spec`、`to-tickets`（本地 tracker 时） |
@@ -314,11 +315,14 @@ npx skills remove harness-workflow        # 在项目根目录下，项目级
 
 | 我想…… | 用 |
 |---|---|
+| 不知道该用哪个技能 | `ask-matt` |
+| 规划一个路线还看不清的大工程 | `wayfinder` |
 | 把需求问清楚 | `grill-with-docs`（不想留文档用 `grill-me`） |
 | 把讨论整理成 spec | `to-spec` |
 | 把 spec 拆成可独立完成的 ticket | `to-tickets` |
 | 按 spec 或 ticket 写代码 | `implement` |
 | 先做个原型看看 | `prototype` |
+| 查官方文档、API 事实并写成笔记 | `research` |
 | 搞懂某段代码怎么工作、该放哪 | `how` |
 | 搞懂当初为什么这样设计 | `why` |
 | 看一个改动会影响哪些地方 | `blast-radius` |

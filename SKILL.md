@@ -60,6 +60,7 @@ description: 项目工作流路由。负责两件事：一是根据代码生成�
 |---|---|---|
 | `AGENTS.md` | 入口和路由。不超过 200 行，目标 120 行内 | 本 skill |
 | `docs/agents/{project,architecture,stack,conventions,commands}.md` | 专题文档 | 本 skill |
+| `docs/agents/design-artifacts.md` | OpenDesign 设计稿约定（项目用 OpenDesign 时才有） | 本 skill |
 | `docs/agents/progress.md` | 当前任务、基线、待办、简短交接 | 本 skill |
 | `docs/agents/{issue-tracker,domain,triage-labels}.md` | Matt 技能的配置 | `setup-matt-pocock-skills` |
 | `GLOSSARY.md`、`docs/adr/` | 术语、决策记录 | Matt 的 `domain-modeling`（经 `grill-with-docs`） |

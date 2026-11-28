@@ -27,7 +27,7 @@
 6. 更新 `progress.md`
 
 ## 大功能（L）
-1. 提示 `grill-with-docs`
+1. 提示 `grill-with-docs`。路线还看不清（绿地项目、目的地说不清）时改为提示 `wayfinder`，地图清晰后从第 2 步接上
 2. 提示 `to-spec`。没配过 tracker 的，先提示 `setup-matt-pocock-skills`
 3. 一个会话做不完时，提示 `to-tickets`
 4. 提示 `implement`，逐个 ticket 推进
